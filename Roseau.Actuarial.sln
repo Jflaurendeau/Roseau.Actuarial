@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roseau.ActuarialFactor", "src\Roseau.ActuarialFactor\Roseau.ActuarialFactor.csproj", "{6DC65F20-6A56-4681-A6EC-8E796EC3DBCB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roseau.ActuarialFactor.UnitTests", "tests\Roseau.ActuarialFactor.UnitTests\Roseau.ActuarialFactor.UnitTests.csproj", "{B39C5E3B-6FCA-41AD-A2FA-F85048E1E49A}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Roseau.Decrement", "..\Roseau.Decrement\src\Roseau.Decrement\Roseau.Decrement.csproj", "{3B73BC30-0FB1-4D28-8838-217782D27F9C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Roseau.InterestRate", "..\Roseau.InterestRate\src\Roseau.InterestRate\Roseau.InterestRate.csproj", "{69CABB66-9247-455C-AE69-B2ABCE131AD6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Roseau.Actuarial", "src\Roseau.Actuarial\Roseau.Actuarial.csproj", "{D23C8E6A-3C9C-4A79-B5D1-CB730BED8935}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Roseau.Actuarial.UnitTests", "tests\Roseau.Actuarial.UnitTests\Roseau.Actuarial.UnitTests.csproj", "{F0CD3644-6C4C-42AF-86D5-725FD6CEA0AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,14 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6DC65F20-6A56-4681-A6EC-8E796EC3DBCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6DC65F20-6A56-4681-A6EC-8E796EC3DBCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6DC65F20-6A56-4681-A6EC-8E796EC3DBCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6DC65F20-6A56-4681-A6EC-8E796EC3DBCB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B39C5E3B-6FCA-41AD-A2FA-F85048E1E49A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B39C5E3B-6FCA-41AD-A2FA-F85048E1E49A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B39C5E3B-6FCA-41AD-A2FA-F85048E1E49A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B39C5E3B-6FCA-41AD-A2FA-F85048E1E49A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3B73BC30-0FB1-4D28-8838-217782D27F9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3B73BC30-0FB1-4D28-8838-217782D27F9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B73BC30-0FB1-4D28-8838-217782D27F9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +25,14 @@ Global
 		{69CABB66-9247-455C-AE69-B2ABCE131AD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69CABB66-9247-455C-AE69-B2ABCE131AD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69CABB66-9247-455C-AE69-B2ABCE131AD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D23C8E6A-3C9C-4A79-B5D1-CB730BED8935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D23C8E6A-3C9C-4A79-B5D1-CB730BED8935}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D23C8E6A-3C9C-4A79-B5D1-CB730BED8935}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D23C8E6A-3C9C-4A79-B5D1-CB730BED8935}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0CD3644-6C4C-42AF-86D5-725FD6CEA0AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0CD3644-6C4C-42AF-86D5-725FD6CEA0AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0CD3644-6C4C-42AF-86D5-725FD6CEA0AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0CD3644-6C4C-42AF-86D5-725FD6CEA0AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -43,15 +43,15 @@ jobs:
       - name: Restore packages and dependencies 📥📦
         run: |
              dotnet tool install coverlet.console -g
-             dotnet restore ./src/Roseau.ActuarialFactor/Roseau.ActuarialFactor.csproj
-             dotnet restore ./tests/Roseau.ActuarialFactor.UnitTests/Roseau.ActuarialFactor.UnitTests.csproj
+             dotnet restore ./src/Roseau.Actuarial/Roseau.Actuarial.csproj
+             dotnet restore ./tests/Roseau.Actuarial.UnitTests/Roseau.Actuarial.UnitTests.csproj
       - name: Build For Release 👷‍♀🏗️
         run: |
-             dotnet build ./src/Roseau.ActuarialFactor/Roseau.ActuarialFactor.csproj -c Release --no-restore
-             dotnet build ./tests/Roseau.ActuarialFactor.UnitTests/Roseau.ActuarialFactor.UnitTests.csproj -c Release --no-restore
+             dotnet build ./src/Roseau.Actuarial/Roseau.Actuarial.csproj -c Release --no-restore
+             dotnet build ./tests/Roseau.Actuarial.UnitTests/Roseau.Actuarial.UnitTests.csproj -c Release --no-restore
 
       - name: Run tests 🩺🔬🧑‍🔬
-        run: dotnet test ./tests/Roseau.ActuarialFactor.UnitTests/Roseau.ActuarialFactor.UnitTests.csproj -c Release --no-restore
+        run: dotnet test ./tests/Roseau.Actuarial.UnitTests/Roseau.Actuarial.UnitTests.csproj -c Release --no-restore
 
       - name: Set up JDK 11 (For SonarCloud) ⚒️
         uses: actions/setup-java@v3
@@ -86,10 +86,10 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-             .\.sonar\scanner\dotnet-sonarscanner begin /k:"Jflaurendeau_Roseau.ActuarialFactor" /o:"jflaurendeau" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths=".\tests\Roseau.ActuarialFactor.UnitTests\TestResults\coverage.xml"
-             dotnet build .\src\Roseau.ActuarialFactor\Roseau.ActuarialFactor.csproj
-             dotnet build .\tests\Roseau.ActuarialFactor.UnitTests\Roseau.ActuarialFactor.UnitTests.csproj
-             coverlet .\tests\Roseau.ActuarialFactor.UnitTests\bin\Debug\net7.0\Roseau.ActuarialFactor.UnitTests.dll --target "dotnet" --targetargs "test --no-build --no-restore" -f=opencover -o=".\tests\Roseau.ActuarialFactor.UnitTests\TestResults\coverage.xml"
+             .\.sonar\scanner\dotnet-sonarscanner begin /k:"Jflaurendeau_Roseau.Actuarial" /o:"jflaurendeau" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths=".\tests\Roseau.Actuarial.UnitTests\TestResults\coverage.xml"
+             dotnet build .\src\Roseau.Actuarial\Roseau.Actuarial.csproj
+             dotnet build .\tests\Roseau.Actuarial.UnitTests\Roseau.Actuarial.UnitTests.csproj
+             coverlet .\tests\Roseau.Actuarial.UnitTests\bin\Debug\net7.0\Roseau.Actuarial.UnitTests.dll --target "dotnet" --targetargs "test --no-build --no-restore" -f=opencover -o=".\tests\Roseau.Actuarial.UnitTests\TestResults\coverage.xml"
              .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
   Semantic-versioning:
     runs-on: ubuntu-latest
