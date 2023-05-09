@@ -15,4 +15,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Roseau.Decrement\src\Roseau.Decrement\Roseau.Decrement.csproj" PrivateAssets="Compile;Contentfiles;Build;Analyzers" />
+    <ProjectReference Include="..\..\..\Roseau.InterestRate\src\Roseau.InterestRate\Roseau.InterestRate.csproj" PrivateAssets="Compile;Contentfiles;Build;Analyzers" />
+  </ItemGroup>
+
 </Project>
